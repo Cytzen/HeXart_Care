@@ -26,13 +26,12 @@ void menu ()
         printf("(10)    Afficher le poul maximum\n\n");
         printf("(autre) Quitter?\n\n");
 
-        scanf("%d",&choice);
+        scanf("%d", &choice);
 
         switch(choice)
         {
         case 1 :
         {
-
 
 
             break;

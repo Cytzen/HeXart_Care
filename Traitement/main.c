@@ -27,8 +27,8 @@ int main()
     else
     {
         chargeDonnees (ptr_TableauDonnees);
-        }
     }
+
 
 
 
