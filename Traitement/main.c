@@ -33,7 +33,7 @@ int main()
 
 
 
-    menu();
+    menu(ptr_TableauDonnees);
 
     free (ptr_TableauDonnees);
     return 0;

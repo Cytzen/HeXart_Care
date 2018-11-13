@@ -1,6 +1,8 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
-void menu ();
+#include "donnees.h"
+
+void menu (ligne *ptr_Tableau);
 
 #endif // MENU_H_INCLUDED

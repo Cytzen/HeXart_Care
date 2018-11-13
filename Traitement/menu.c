@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 #include "menu.h"
+#include "actions.h"
 
 
-void menu ()
+void menu (ligne *ptr_Tableau)
 {
     int choice = 1;
 
@@ -32,6 +33,8 @@ void menu ()
         {
         case 1 :
         {
+            ordre(ptr_Tableau);
+            printf("\n");
 
 
             break;
