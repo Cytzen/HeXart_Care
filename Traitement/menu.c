@@ -15,13 +15,13 @@ void menu (ligne *ptr_Tableau)
     while ((choice > 0) && (choice < 11))
     {
         printf("Que souhaitez-vous faire?\n\n");
-        printf("(1)     Afficher dans l'odre du fichier\n");
-        printf("(2)     Afficher dans l'odre croissant des dates\n");
-        printf("(3)     Afficher dans l'odre decrissant des date\n");
-        printf("(4)     Afficher dans l'odre croissantt des pouls\n");
-        printf("(5)     Afficher dans l'odre décrissant des pouls\n");
-        printf("(6)     Afficher les données pour un temps choisis\n");
-        printf("(7)     Afficher la moyenne pour une plage de donnees choisie\n");
+        printf("(1)     Afficher dans l'ordre du fichier\n");
+        printf("(2)     Afficher dans l'ordre croissant des dates\n");
+        printf("(3)     Afficher dans l'ordre decrissant des date\n");
+        printf("(4)     Afficher dans l'ordre croissant des pouls\n");
+        printf("(5)     Afficher dans l'ordre decroissant des pouls\n");
+        printf("(6)     Afficher les donnees pour un temps choisi\n");
+        printf("(7)     Afficher la moyenne pour une plage de donnees choisi\n");
         printf("(8)     Afficher le nombre de ligne de donnees actuellement en memoire\n");
         printf("(9)     Afficher le poul minimum\n");
         printf("(10)    Afficher le poul maximum\n\n");
@@ -35,10 +35,9 @@ void menu (ligne *ptr_Tableau)
         {
             ordre(ptr_Tableau);
             printf("\n");
-
-
             break;
         }
+
         case 2  :
         {
 
