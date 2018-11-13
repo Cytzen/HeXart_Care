@@ -6,15 +6,17 @@
     EXIA A1
 */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 #include "menu.h"
-
+#include "donnees.h"
 
 
 int main()
 {
-
+    chargeDonnees ();
+    menu();
     return 0;
 }

@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1542113461 source:c:\users\calde\documents\github\hexart_care\traitement\main.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"menu.h"
+	"donnees.h"
+
+1542104091 c:\users\calde\documents\github\hexart_care\traitement\menu.h
+
+1542113461 source:c:\users\calde\documents\github\hexart_care\traitement\menu.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"menu.h"
+
+1542113458 c:\users\calde\documents\github\hexart_care\traitement\donnees.h
+
+1542113798 source:c:\users\calde\documents\github\hexart_care\traitement\donnees.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"donnees.h"
+

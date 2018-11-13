@@ -1,18 +1,17 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 #include "menu.h"
-
-
 
 
 void menu ()
 {
     int choice = 1;
 
-    printf("**** Traitement des données ****\n\n");
+    printf("**** Traitement des donnees ****\n\n");
 
-    while ((choice > 0) && (choice < 4))
+    while ((choice > 0) && (choice < 11))
     {
         printf("Que souhaitez-vous faire?\n\n");
         printf("(1)     Afficher dans l'odre du fichier\n");
@@ -24,8 +23,8 @@ void menu ()
         printf("(7)     Afficher la moyenne pour une plage de donnees choisie\n");
         printf("(8)     Afficher le nombre de ligne de donnees actuellement en memoire\n");
         printf("(9)     Afficher le poul minimum\n");
-        printf("(10)    Afficher le poul maximum\n");
-        printf("(autre) Quitter?\n");
+        printf("(10)    Afficher le poul maximum\n\n");
+        printf("(autre) Quitter?\n\n");
 
         scanf("%d",&choice);
 
@@ -33,6 +32,7 @@ void menu ()
         {
         case 1 :
         {
+
 
 
             break;
