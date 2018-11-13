@@ -5,27 +5,26 @@
 #include "donnees.h"
 
 
-void chargeDonnees ()
+void chargeDonnees (ligne *ptr_Tableau)
 {
 
     ligne ligne1;
-    int i =0;
-    int checkCloture = 1;
-    float tableau[12]= {0}; ///----------------------------///
+    int checkFermeture = 1;
 
     FILE* fichier = NULL;
-    fichier = fopen("Tableau.csv", "r");
+    fichier = fopen("Tableau.csv", "r"); ///----------------------------///
 
     if (fichier != NULL)
     {
         printf("Succes ouverture du fichier\n");
-        for(i = 0; i < 12; i++) ///----------------------------///
+        for(int i = 0; i < 12; i++) ///----------------------------///
         {
             fscanf(fichier, "%f;%f", &ligne1.temps, &ligne1.poul);
+            ptr_Tableau[i] = ligne1;
         }
 
-        checkCloture = fclose(fichier);
-        if(checkCloture == 0)
+        checkFermeture = fclose(fichier);
+        if(checkFermeture == 0)
         {
             printf("Succes fermeture du fichier\n");
         }

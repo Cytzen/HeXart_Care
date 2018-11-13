@@ -1,5 +1,5 @@
 /*
-    Traitement des données
+    Module 3.4 : Traitement des données
 
     Projet : HeXartCare
     Corentin, Gabriel, Julien, Arthur
@@ -14,9 +14,27 @@
 #include "donnees.h"
 
 
+
 int main()
 {
-    chargeDonnees ();
+    ligne *ptr_TableauDonnees;
+    ptr_TableauDonnees = malloc(255*sizeof(float));
+    if (ptr_TableauDonnees == NULL)
+    {
+        printf("Erreur creation du tableau");
+        return 0;
+    }
+    else
+    {
+        chargeDonnees (ptr_TableauDonnees);
+        }
+    }
+
+
+
+
     menu();
+
+    free (ptr_TableauDonnees);
     return 0;
 }
