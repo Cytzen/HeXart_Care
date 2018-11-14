@@ -7,4 +7,6 @@ void ordreFichier(ligne* ptr_Tableau, int* ptr_nbrLine);
 
 void ordreCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine);
 
+void ordreDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine);
+
 #endif // ACTIONS_H_INCLUDED

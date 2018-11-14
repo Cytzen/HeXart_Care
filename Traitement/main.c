@@ -23,9 +23,10 @@ int main()
     ///----------------------------///
 
 
-
+    //Création du tableau (de structure ligne) qui va stocker les données en mémoire.
     ligne *ptr_TableauDonnees;
     ptr_TableauDonnees = malloc(255*sizeof(float));
+
     if (ptr_TableauDonnees == NULL)
     {
         printf("Erreur creation du tableau");
@@ -37,8 +38,11 @@ int main()
     }
 
 
-    menu(ptr_TableauDonnees, ptr_nbrLine);
+    //Appel du menu.
+    menu (ptr_TableauDonnees, ptr_nbrLine);
 
+
+    //Libération de la mémoire et sortie du programme.
     free (ptr_TableauDonnees);
     return 0;
 }
