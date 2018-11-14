@@ -6,6 +6,7 @@ PrintWriter output;
 Serial udSerial;
 
 void setup() {
+
   udSerial = new Serial(this, Serial.list()[0], 9600);
   output = createWriter ("Battements.csv");
 }
@@ -13,14 +14,14 @@ void setup() {
   void draw() {
     if (udSerial.available() > 0) {
       String SenVal = udSerial.readString();
-      int Heure = hour();
+      /* int Heure = hour();
       int Minute = minute();
       int Seconde = second();
       int Jour = day();
       int Mois = month();
-      int Annee = year();
+      int Annee = year();*/
       if (SenVal != null) {
-        output.println(SenVal+"     "+Jour+"/"+Mois+"/"+Annee+"  "+Heure+":"+Minute+" "+Seconde+"s");
+        output.println(SenVal/*+"     "+Jour+"/"+Mois+"/"+Annee+"  "+Heure+":"+Minute+" "+Seconde+"s"*/);
       }
     }
   }
