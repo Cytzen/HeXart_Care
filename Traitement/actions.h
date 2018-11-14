@@ -5,6 +5,6 @@
 
 void ordreFichier(ligne *ptr_Tableau);
 
-void ordreCroissantTemps(ligne *ptr_Tableau);
+void ordreCroissantTemps(ptr_Tableau);
 
 #endif // ACTIONS_H_INCLUDED

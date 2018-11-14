@@ -7,20 +7,36 @@
 
 void chargeDonnees (ligne *ptr_Tableau)
 {
+    int nbrLine = 0;
+    int* ptr_nbrLine = &nbrLine;
 
-    ligne ligne1;
+    int compteur;
+
+    ligne ligneEnCour;
     int checkFermeture = 1;
 
     FILE* fichier = NULL;
+
+    //Recupère le nombre de lignes du fichier.
     fichier = fopen("Tableau.csv", "r"); ///----------------------------///
 
+    while ((compteur = getc(fichier)) != EOF) ////End Of Fichier
+    {
+        if (compteur == '\n')
+            ++nbrLine;
+    }
+    printf ("%d", nbrLine); ///----------------------------///
+
+
+    //Remplis le tableau de structure avec les données du .csv.
+    fichier = fopen("Tableau.csv", "r"); ///----------------------------///
     if (fichier != NULL)
     {
         printf("Succes ouverture du fichier\n");
-        for(int i = 0; i < 12; i++) ///----------------------------///
+        for(int i = 0; i < *ptr_nbrLine; i++)
         {
-            fscanf(fichier, "%f;%f", &ligne1.temps, &ligne1.poul);
-            ptr_Tableau[i] = ligne1;
+            fscanf(fichier, "%f;%f", &ligneEnCour.temps, &ligneEnCour.poul);
+            ptr_Tableau[i] = ligneEnCour;
         }
 
         checkFermeture = fclose(fichier);
