@@ -17,6 +17,13 @@
 
 int main()
 {
+    ///----------------------------///
+    int nbrLine = 0;
+    int* ptr_nbrLine = &nbrLine;
+    ///----------------------------///
+
+
+
     ligne *ptr_TableauDonnees;
     ptr_TableauDonnees = malloc(255*sizeof(float));
     if (ptr_TableauDonnees == NULL)
@@ -26,14 +33,11 @@ int main()
     }
     else
     {
-        chargeDonnees (ptr_TableauDonnees);
+        chargeDonnees (ptr_TableauDonnees, ptr_nbrLine);
     }
 
 
-
-
-
-    menu(ptr_TableauDonnees);
+    menu(ptr_TableauDonnees, ptr_nbrLine);
 
     free (ptr_TableauDonnees);
     return 0;

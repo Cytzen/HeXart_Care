@@ -9,6 +9,6 @@ struct ligne
     float poul;
 };
 
-void chargeDonnees(ligne *ptr_Tableau);
+void chargeDonnees(ligne* ptr_Tableau, int* ptr_nbrLine);
 
 #endif // DONNEES_H_INCLUDED

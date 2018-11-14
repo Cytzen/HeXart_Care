@@ -6,7 +6,7 @@
 #include "actions.h"
 
 
-void menu (ligne *ptr_Tableau)
+void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 {
     int choice = 1;
 
@@ -33,14 +33,14 @@ void menu (ligne *ptr_Tableau)
         {
         case 1 :
         {
-            ordreFichier(ptr_Tableau);
+            ordreFichier(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
         }
 
         case 2  :
         {
-            ordreCroissantTemps(ptr_Tableau);
+            ordreCroissantTemps(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
         }

@@ -3,6 +3,6 @@
 
 #include "donnees.h"
 
-void menu (ligne *ptr_Tableau);
+void menu (ligne* ptr_Tableau, int* ptr_nbrLine);
 
 #endif // MENU_H_INCLUDED

@@ -5,10 +5,10 @@
 #include "donnees.h"
 
 
-void chargeDonnees (ligne *ptr_Tableau)
+void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    int nbrLine = 0;
-    int* ptr_nbrLine = &nbrLine;
+    //int nbrLine = 0;
+    // int* ptr_nbrLine = &nbrLine;
 
     int compteur;
 
@@ -23,12 +23,12 @@ void chargeDonnees (ligne *ptr_Tableau)
     while ((compteur = getc(fichier)) != EOF) ////End Of Fichier
     {
         if (compteur == '\n')
-            ++nbrLine;
+            ++*ptr_nbrLine;
     }
-    printf ("%d", nbrLine); ///----------------------------///
+    printf ("Nbr de lignes = %d\n\n", *ptr_nbrLine); ///----------------------------//////----------------------------///
 
 
-    //Remplis le tableau de structure avec les données du .csv.
+    //Remplis le tableau de structure avec les données du csv.
     fichier = fopen("Tableau.csv", "r"); ///----------------------------///
     if (fichier != NULL)
     {
