@@ -33,18 +33,18 @@ void menu (ligne *ptr_Tableau)
         {
         case 1 :
         {
-            ordre(ptr_Tableau);
+            ordreFichier(ptr_Tableau);
             printf("\n");
             break;
         }
 
         case 2  :
         {
-
-
-
+            ordreCroissantTemps(ptr_Tableau);
+            printf("\n");
             break;
         }
+
         case 3  :
         {
 
