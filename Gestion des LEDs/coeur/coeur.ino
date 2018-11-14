@@ -6,15 +6,15 @@ int val = 0;
 
 void setup() {
   for(i=3; i<13; i++){
-    pinMode(i, OUTPUT);
+    pinMode(i, OUTPUT); // On initialise les pins sur lesquels sont branchs les LEDs comme sorties.
   }
-  pinMode(2, INPUT);
+  pinMode(2, INPUT); // On initialise le pin 2 comme entrée.
 }
 
 void loop() {
-  val = digitalRead(2);
-  if (val == 1){
-    switch(mode){
+  val = digitalRead(2); // On attribue l'état (HIGH ou LOW) du pin 2 à la variable val.
+  if (val == 1){ // Si val(le pin 2) est à l'état haut...
+    switch(mode){ //...on regarde la valeur de mode, et on choisi la fonction correspondante.
       case 1:{
         all();
         break;
@@ -29,8 +29,8 @@ void loop() {
       }
       case 4:{
         caterpillar(i);
-        i++;
-        if(i>12){
+        i++; 
+        if(i>12){ //v(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
           i = 3;
         }
         break;
@@ -38,7 +38,7 @@ void loop() {
       case 5:{
         caterpillarBlink(i);
         i++;
-        if(i>12){
+        if(i>12){ // Same as (1)
           i = 3;
         }
         break;
@@ -48,7 +48,7 @@ void loop() {
         break;
       }
     }
-    delay(300);
+    delay(100);
   }
 }
 
