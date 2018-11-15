@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1542269922 source:d:\documents\github\hexart_care\gestion des leds\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"generationCode.h"
+	<stdbool.h>
+
+1542211284 d:\documents\github\hexart_care\gestion des leds\generationcode.h
+	<stdbool.h>
+
+1542211284 source:d:\documents\github\hexart_care\gestion des leds\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542211284 d:\documents\github\hexart_care\gestion des leds\menu.h
+
+1542211284 source:d:\documents\github\hexart_care\gestion des leds\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"generationCode.h"
+	"menu.h"
+

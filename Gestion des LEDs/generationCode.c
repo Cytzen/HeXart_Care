@@ -11,7 +11,7 @@ bool ecriture(int mode, int x){
         printf("/nEchec d'ouverture du fichier. Fermeture./n");
         return false;
     }
-    fprintf(modeLeds,"int mode = %d;\nint x = %d;", mode, x);
+    fprintf(modeLeds,"#ifndef PARAM_H_\n#define PARAM_H_\n\nint mode = %d;\nint x = %d;\n\n#endif /* PARAM_H */", mode, x);
     fclose(modeLeds);
     return true;
 }
