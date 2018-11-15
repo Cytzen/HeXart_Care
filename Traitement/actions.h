@@ -13,4 +13,10 @@ void ordreCroissantPoul(ligne* ptr_Tableau, int* ptr_nbrLine);
 
 void ordredecroissantPoul(ligne* ptr_Tableau, int* ptr_nbrLine);
 
+void tempsChoisi(ligne* ptr_Tableau, int* ptr_nbrLine);
+
+
+
+void nbrLigneDonnees(int* ptr_nbrLine);
+
 #endif // ACTIONS_H_INCLUDED

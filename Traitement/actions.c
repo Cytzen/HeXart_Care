@@ -7,7 +7,7 @@
 
 void ordreFichier(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    for(int i = 0; i < *ptr_nbrLine; i++)
+    for (int i = 0; i < *ptr_nbrLine; i++)
     {
         printf("A %f ms ", ptr_Tableau[i].temps);
         printf("le poul est de %f.\n", ptr_Tableau[i].poul);
@@ -17,7 +17,7 @@ void ordreFichier(ligne* ptr_Tableau, int* ptr_nbrLine)
 
 void ordreCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    for(int i = 0; i < *ptr_nbrLine; i++)
+    for (int i = 0; i < *ptr_nbrLine; i++)
     {
         printf("A %f ms ", ptr_Tableau[i].temps);
         printf("le poul est de %f.\n", ptr_Tableau[i].poul);
@@ -27,7 +27,7 @@ void ordreCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 
 void ordreDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    for(int j = *ptr_nbrLine-1; j >= 0; j--)
+    for (int j = *ptr_nbrLine-1; j >= 0; j--)
     {
         printf("A %f ms ", ptr_Tableau[j].temps);
         printf("le poul est de %f.\n", ptr_Tableau[j].poul);
@@ -58,7 +58,7 @@ void ordreCroissantPoul(ligne* ptr_Tableau, int* ptr_nbrLine)
         ptr_Tableau[min] = tempo;
     }
 
-     for(int i = 0; i < *ptr_nbrLine; i++)
+    for (int i = 0; i < *ptr_nbrLine; i++)
     {
         printf("A %f ms ", ptr_Tableau[i].temps);
         printf("le poul est de %f.\n", ptr_Tableau[i].poul);
@@ -89,7 +89,7 @@ void ordreDecroissantPoul(ligne* ptr_Tableau, int* ptr_nbrLine)
         ptr_Tableau[min] = tempo;
     }
 
-     for(int i = 0; i < *ptr_nbrLine; i++)
+    for (int i = 0; i < *ptr_nbrLine; i++)
     {
         printf("A %f ms ", ptr_Tableau[i].temps);
         printf("le poul est de %f.\n", ptr_Tableau[i].poul);
@@ -97,4 +97,45 @@ void ordreDecroissantPoul(ligne* ptr_Tableau, int* ptr_nbrLine)
     return;
 }
 
+void tempsChoisi(ligne* ptr_Tableau, int* ptr_nbrLine)
+{
+    float choix;
+    printf("Pour quel temps en ms voulez vous afficher les donnees ?\n");
+    scanf("%f", &choix);
+    printf("\n");
 
+    if (0 < choix && choix <= ptr_Tableau[*ptr_nbrLine-1].temps)
+    {
+        for (int i = 0; i < *ptr_nbrLine; i++)
+        {
+            if (ptr_Tableau[i].temps == choix)
+            {
+                printf("A %f ms ", ptr_Tableau[i].temps);
+                printf("le poul est de %f.\n", ptr_Tableau[i].poul);
+            }
+        }
+    }
+    else
+    {
+        printf("Il n'y a pas de donnees pour le temps que vous avez choisi.\n");
+    }
+
+    return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+void nbrLigneDonnees(int* ptr_nbrLine)
+{
+    printf ("Le nombre de lignes de donnees actuellement en memoire est %d.\n", *ptr_nbrLine);
+
+}
