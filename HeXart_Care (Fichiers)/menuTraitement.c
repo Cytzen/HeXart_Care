@@ -1,18 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "menu.h"
+#include "menuTraitement.h"
 #include "actions.h"
 
 
-void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
+void menuTraitement(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
     int choice = 1;
 
-    printf("**** Traitement des donnees ****\n\n");
-
     while ((choice > 0) && (choice < 11))
     {
+        printf("<---- Menu : Traitement de donnees ---->\n");
         printf("Que souhaitez-vous faire?\n\n");
         printf("(1)     Afficher dans l'ordre du fichier.\n");
         printf("(2)     Afficher dans l'ordre croissant des dates.\n");
@@ -24,7 +23,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         printf("(8)     Afficher le nombre de ligne de donnees actuellement en memoire.\n");
         printf("(9)     Afficher le pouls minimum.\n");
         printf("(10)    Afficher le pouls maximum.\n\n");
-        printf("(autre) Quitter?\n\n");
+        printf("(autre) Retour\n\n");
 
         scanf("%d", &choice);
         printf("\n");
@@ -114,7 +113,8 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         default :
         {
 
-            printf("CIAO !");
+            printf("RETOUR !");
+            printf("\n");
             return;
         }
         }

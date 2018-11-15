@@ -171,7 +171,7 @@ void moyenne(ligne* ptr_Tableau, int* ptr_nbrLine)
         }
     }
     moyenne = moyenne / nbrTotal;                                   //Calcul de la moyenne.
-    printf("La moyenne du pouls sur la plage %.0fms - %.0fms est de %.2f.\n", debut, fin, moyenne);
+    printf("La moyenne du pouls sur la plage %.0fms - %.0fms, est de %.2f.\n", debut, fin, moyenne);
 }
 
 

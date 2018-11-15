@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1542291900 source:c:\users\calde\documents\github\hexart_care\hexart_care\actions.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	"actions.h"
+	"tris.h"
+
+1542277847 c:\users\calde\documents\github\hexart_care\hexart_care\actions.h
+	"donnees.h"
+
+1542277847 c:\users\calde\documents\github\hexart_care\hexart_care\donnees.h
+
+1542277847 c:\users\calde\documents\github\hexart_care\hexart_care\tris.h
+	"donnees.h"
+
+1542277847 source:c:\users\calde\documents\github\hexart_care\hexart_care\donnees.c
+	<stdlib.h>
+	<stdio.h>
+	"donnees.h"
+
+1542317683 source:c:\users\calde\documents\github\hexart_care\hexart_care\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"generationCode.h"
+
+1542293240 c:\users\calde\documents\github\hexart_care\hexart_care\generationcode.h
+	<stdbool.h>
+
+1542317469 source:c:\users\calde\documents\github\hexart_care\hexart_care\main.c
+	<stdlib.h>
+	<stdio.h>
+	"menuTraitement.h"
+	"menuLEDs.h"
+
+1542291948 c:\users\calde\documents\github\hexart_care\hexart_care\menutraitement.h
+	"donnees.h"
+
+1542293165 c:\users\calde\documents\github\hexart_care\hexart_care\menuleds.h
+
+1542317489 source:c:\users\calde\documents\github\hexart_care\hexart_care\menuleds.c
+	<stdio.h>
+	<stdlib.h>
+	"menuLEDs.h"
+	"generationCode.h"
+
+1542317489 source:c:\users\calde\documents\github\hexart_care\hexart_care\menutraitement.c
+	<stdlib.h>
+	<stdio.h>
+	"menuTraitement.h"
+	"actions.h"
+
+1542277847 source:c:\users\calde\documents\github\hexart_care\hexart_care\tris.c
+	<stdlib.h>
+	<stdio.h>
+	"tris.h"
+
