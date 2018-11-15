@@ -32,10 +32,6 @@ int main()
         printf("Erreur creation du tableau");
         return 0;
     }
-    /*else
-    {
-        chargeDonnees (ptr_TableauDonnees, ptr_nbrLine);
-    }*/
 
 
     //Appel du menu.

@@ -23,8 +23,8 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         printf("(6)     Afficher les donnees pour un temps choisi.\n");
         printf("(7)     Afficher la moyenne pour une plage de donnees choisi.\n");
         printf("(8)     Afficher le nombre de ligne de donnees actuellement en memoire.\n");
-        printf("(9)     Afficher le poul minimum.\n");
-        printf("(10)    Afficher le poul maximum.\n\n");
+        printf("(9)     Afficher le pouls minimum.\n");
+        printf("(10)    Afficher le pouls maximum.\n\n");
         printf("(autre) Quitter?\n\n");
 
         scanf("%d", &choice);
@@ -59,7 +59,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         case 4  :
         {
             chargeDonnees(ptr_Tableau, ptr_nbrLine);
-            ordreCroissantPoul(ptr_Tableau, ptr_nbrLine);
+            ordreCroissantPouls(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
         }
@@ -67,7 +67,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         case 5  :
         {
             chargeDonnees(ptr_Tableau, ptr_nbrLine);
-            ordreDecroissantPoul(ptr_Tableau, ptr_nbrLine);
+            ordreDecroissantPouls(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
         }
@@ -98,16 +98,17 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 
         case 9  :
         {
-
-
-
+            chargeDonnees(ptr_Tableau, ptr_nbrLine);
+            poulsMin(ptr_Tableau, ptr_nbrLine);
+            printf("\n");
             break;
         }
+
         case 10  :
         {
-
-
-
+            chargeDonnees(ptr_Tableau, ptr_nbrLine);
+            poulsMax(ptr_Tableau, ptr_nbrLine);
+            printf("\n");
             break;
         }
         default :
