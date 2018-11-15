@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "tris.h"
@@ -16,7 +15,7 @@ void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
         min = i;
         for (int k = i+1; k < *ptr_nbrLine ; k++)
         {
-            if (ptr_Tableau[k].poul < ptr_Tableau[min].poul)
+            if (ptr_Tableau[k].pouls < ptr_Tableau[min].pouls)
             {
                 min =k;
             }
@@ -40,7 +39,7 @@ void trisDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
         min = i;
         for (int k = i+1; k < *ptr_nbrLine ; k++)
         {
-            if (ptr_Tableau[k].poul > ptr_Tableau[min].poul)
+            if (ptr_Tableau[k].pouls > ptr_Tableau[min].pouls)
             {
                 min =k;
             }

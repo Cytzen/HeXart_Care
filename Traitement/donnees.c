@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "donnees.h"
@@ -32,7 +31,7 @@ void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
         printf("Succes ouverture du fichier\n");
         for (int i = 0; i < *ptr_nbrLine; i++)
         {
-            fscanf(fichier, "%f;%f", &ligneEnCour.temps, &ligneEnCour.poul);
+            fscanf(fichier, "%f;%f", &ligneEnCour.temps, &ligneEnCour.pouls);
             ptr_Tableau[i] = ligneEnCour;
         }
 

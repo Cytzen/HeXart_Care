@@ -7,25 +7,21 @@
 */
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "menu.h"
-#include "donnees.h"
-
 
 
 int main()
 {
-    ///----------------------------///
+    //Déclaration du pointeur qui contiendra le nombre lignes.
     int nbrLine = 0;
     int* ptr_nbrLine = &nbrLine;
-    ///----------------------------///
 
 
     //Création du tableau (de structure ligne) qui va stocker les données en mémoire.
     ligne *ptr_Tableau;
-    ptr_Tableau = malloc(255*sizeof(float));
+    ptr_Tableau = malloc(255*sizeof(float)); //-------------------------------//
 
     if (ptr_Tableau == NULL)
     {

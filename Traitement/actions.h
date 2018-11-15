@@ -15,7 +15,7 @@ void ordredecroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine);
 
 void tempsChoisi(ligne* ptr_Tableau, int* ptr_nbrLine);
 
-
+void moyenne(ligne* ptr_Tableau, int* ptr_nbrLine);
 
 void nbrLigneDonnees(int* ptr_nbrLine);
 

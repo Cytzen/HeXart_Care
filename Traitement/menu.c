@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "menu.h"
@@ -82,9 +81,9 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         }
         case 7  :
         {
-
-
-
+            chargeDonnees(ptr_Tableau, ptr_nbrLine);
+            moyenne(ptr_Tableau, ptr_nbrLine);
+            printf("\n");
             break;
         }
 
@@ -111,6 +110,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
             printf("\n");
             break;
         }
+
         default :
         {
 

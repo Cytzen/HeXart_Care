@@ -1,41 +1,38 @@
 # depslib dependency file v1.0
-1542239217 source:c:\users\calde\documents\github\hexart_care\traitement\main.c
+1542244539 source:c:\users\calde\documents\github\hexart_care\traitement\main.c
 	<stdlib.h>
-	<string.h>
 	<stdio.h>
 	"menu.h"
-	"donnees.h"
 
 1542204803 c:\users\calde\documents\github\hexart_care\traitement\menu.h
 	"donnees.h"
 
-1542239422 source:c:\users\calde\documents\github\hexart_care\traitement\menu.c
+1542244539 source:c:\users\calde\documents\github\hexart_care\traitement\menu.c
 	<stdlib.h>
-	<string.h>
 	<stdio.h>
 	"menu.h"
 	"actions.h"
 
-1542204554 c:\users\calde\documents\github\hexart_care\traitement\donnees.h
+1542244643 c:\users\calde\documents\github\hexart_care\traitement\donnees.h
 
-1542238618 source:c:\users\calde\documents\github\hexart_care\traitement\donnees.c
+1542241460 source:c:\users\calde\documents\github\hexart_care\traitement\donnees.c
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
 	"donnees.h"
 
-1542239919 source:c:\users\calde\documents\github\hexart_care\traitement\actions.c
+1542244576 source:c:\users\calde\documents\github\hexart_care\traitement\actions.c
 	<stdlib.h>
-	<string.h>
 	<stdio.h>
+	<stdbool.h>
 	"actions.h"
+	"tris.h"
 
-1542239422 c:\users\calde\documents\github\hexart_care\traitement\actions.h
+1542240844 c:\users\calde\documents\github\hexart_care\traitement\actions.h
 	"donnees.h"
 
-1542239916 source:c:\users\calde\documents\github\hexart_care\traitement\tris.c
+1542244604 source:c:\users\calde\documents\github\hexart_care\traitement\tris.c
 	<stdlib.h>
-	<string.h>
 	<stdio.h>
 	"tris.h"
 
