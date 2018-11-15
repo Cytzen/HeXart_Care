@@ -1,5 +1,5 @@
 /*
-    Module 3.4 : Traitement des données
+    Module 4 : MODULE LECTURE ET TRAITEMENT DE DONNEES
 
     Projet : HeXartCare
     Corentin, Gabriel, Julien, Arthur
@@ -7,34 +7,34 @@
 */
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "menu.h"
-#include "donnees.h"
-
 
 
 int main()
 {
-    ligne *ptr_TableauDonnees;
-    ptr_TableauDonnees = malloc(255*sizeof(float));
-    if (ptr_TableauDonnees == NULL)
+    //Déclaration du pointeur qui contiendra le nombre lignes.
+    int nbrLine = 0;
+    int* ptr_nbrLine = &nbrLine;
+
+
+    //Création du tableau (de structure "ligne") qui va stocker les données en mémoire.
+    ligne *ptr_Tableau;
+    ptr_Tableau = malloc(255*sizeof(float)); //Allocation de mémoire pour le tableau.
+
+    if (ptr_Tableau == NULL)
     {
         printf("Erreur creation du tableau");
         return 0;
     }
-    else
-    {
-        chargeDonnees (ptr_TableauDonnees);
-    }
 
 
+    //Appel du menu.
+    menu (ptr_Tableau, ptr_nbrLine);
 
 
-
-    menu(ptr_TableauDonnees);
-
-    free (ptr_TableauDonnees);
+    //Libération de la mémoire et sortie du programme.
+    free (ptr_Tableau);
     return 0;
 }
