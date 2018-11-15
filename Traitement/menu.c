@@ -28,7 +28,6 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         printf("(autre) Quitter?\n\n");
 
         scanf("%d", &choice);
-        printf("\n");
 
         switch(choice)
         {
@@ -55,10 +54,8 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 
         case 4  :
         {
-
-
-
-
+            ordreCroissantPoul(ptr_Tableau, ptr_nbrLine);
+            printf("\n");
             break;
         }
         case 5  :
