@@ -1,6 +1,7 @@
 #ifndef DONNEES_H_INCLUDED
 #define DONNEES_H_INCLUDED
 
+//Déclaration de la structure ligne qui contient le temps et le pouls.
 typedef struct ligne ligne;
 struct ligne
 {

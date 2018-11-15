@@ -6,7 +6,7 @@
 
 void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    int compteur;
+    int verif;
     *ptr_nbrLine = 0;
 
     ligne ligneEnCour;
@@ -15,24 +15,25 @@ void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
     FILE* fichier = NULL;
 
     //Recupère le nombre de lignes du fichier.
-    fichier = fopen("Tableau.csv", "r"); //-------------------------------------------------------------------///
-
-    while ((compteur = getc(fichier)) != EOF) ////End Of Fichier
+    fichier = fopen("battements.csv", "r");
+    while ((verif = getc(fichier)) != EOF) ///(End Of Fichier).
     {
-        if (compteur == '\n')
-            ++*ptr_nbrLine;
+        if (verif == '\n')
+            ++*ptr_nbrLine;                //Incrémente le nombre de ligne.
 
     }
 
     //Remplis le tableau de structure avec les données du csv.
-    fichier = fopen("Tableau.csv", "r"); ///-------------------------------------------------------------------///
+    fichier = fopen("battements.csv", "r");
     if (fichier != NULL)
     {
         printf("Succes ouverture du fichier\n");
+
+        // Boucle pour parcourir le tableau du début vers la fin.
         for (int i = 0; i < *ptr_nbrLine; i++)
         {
-            fscanf(fichier, "%f;%f", &ligneEnCour.temps, &ligneEnCour.pouls);
-            ptr_Tableau[i] = ligneEnCour;
+            fscanf(fichier, "%f;%f", &ligneEnCour.temps, &ligneEnCour.pouls); //Récupère les données dans "ligneEnCour".
+            ptr_Tableau[i] = ligneEnCour; //Copie "ligneEnCour" dans la case "i" du tableau.
         }
 
         checkFermeture = fclose(fichier);

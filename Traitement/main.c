@@ -1,5 +1,5 @@
 /*
-    Module 3.4 : Traitement des données
+    Module 4 : MODULE LECTURE ET TRAITEMENT DE DONNEES
 
     Projet : HeXartCare
     Corentin, Gabriel, Julien, Arthur
@@ -19,9 +19,9 @@ int main()
     int* ptr_nbrLine = &nbrLine;
 
 
-    //Création du tableau (de structure ligne) qui va stocker les données en mémoire.
+    //Création du tableau (de structure "ligne") qui va stocker les données en mémoire.
     ligne *ptr_Tableau;
-    ptr_Tableau = malloc(255*sizeof(float)); //-------------------------------//
+    ptr_Tableau = malloc(255*sizeof(float)); //Allocation de mémoire pour le tableau.
 
     if (ptr_Tableau == NULL)
     {

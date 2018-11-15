@@ -11,7 +11,7 @@ void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 
     for (int i = 0 ; i < *ptr_nbrLine; i++)
     {
-        /* recherche du numero du minimum */
+        // Recherche du pouls du minimum.
         min = i;
         for (int k = i+1; k < *ptr_nbrLine ; k++)
         {
@@ -20,7 +20,7 @@ void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
                 min =k;
             }
         }
-        /* echange des valeurs entre la case courante et le minimum */
+        // Echange les valeurs entre la case "i" et le minimum.
         tempo = ptr_Tableau[i];
         ptr_Tableau[i] = ptr_Tableau[min];
         ptr_Tableau[min] = tempo;
@@ -30,23 +30,23 @@ void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 
 void trisDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    int min;
+    int max;
     ligne tempo;
 
     for (int i = 0 ; i < *ptr_nbrLine; i++)
     {
-        /* recherche du numero du minimum */
-        min = i;
+        // Recherche du pouls du maximum.
+        max = i;
         for (int k = i+1; k < *ptr_nbrLine ; k++)
         {
-            if (ptr_Tableau[k].pouls > ptr_Tableau[min].pouls)
+            if (ptr_Tableau[k].pouls > ptr_Tableau[max].pouls)
             {
-                min =k;
+                max =k;
             }
         }
-        /* echange des valeurs entre la case courante et le minimum */
+        // Echange les valeurs entre la case "i" et le maximum.
         tempo = ptr_Tableau[i];
-        ptr_Tableau[i] = ptr_Tableau[min];
-        ptr_Tableau[min] = tempo;
+        ptr_Tableau[i] = ptr_Tableau[max];
+        ptr_Tableau[max] = tempo;
     }
 }
