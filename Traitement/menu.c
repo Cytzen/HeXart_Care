@@ -33,6 +33,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
         {
         case 1 :
         {
+            chargeDonnees (ptr_Tableau, ptr_nbrLine);
             ordreFichier(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
@@ -40,6 +41,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 
         case 2  :
         {
+            chargeDonnees (ptr_Tableau, ptr_nbrLine);
             ordreCroissantTemps(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
@@ -47,6 +49,7 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 
         case 3  :
         {
+            chargeDonnees (ptr_Tableau, ptr_nbrLine);
             ordreDecroissantTemps(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
@@ -54,17 +57,20 @@ void menu (ligne* ptr_Tableau, int* ptr_nbrLine)
 
         case 4  :
         {
+            chargeDonnees (ptr_Tableau, ptr_nbrLine);
             ordreCroissantPoul(ptr_Tableau, ptr_nbrLine);
             printf("\n");
             break;
         }
+
         case 5  :
         {
-
-
-
+            chargeDonnees (ptr_Tableau, ptr_nbrLine);
+            ordreDecroissantPoul(ptr_Tableau, ptr_nbrLine);
+            printf("\n");
             break;
         }
+
         case 6  :
         {
 

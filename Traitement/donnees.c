@@ -11,6 +11,7 @@ void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
     // int* ptr_nbrLine = &nbrLine;
 
     int compteur;
+    *ptr_nbrLine = 0;
 
     ligne ligneEnCour;
     int checkFermeture = 1;
@@ -24,6 +25,7 @@ void chargeDonnees (ligne* ptr_Tableau, int* ptr_nbrLine)
     {
         if (compteur == '\n')
             ++*ptr_nbrLine;
+
     }
     printf ("Nbr de lignes = %d\n\n", *ptr_nbrLine); ///----------------------------//////----------------------------///
 
