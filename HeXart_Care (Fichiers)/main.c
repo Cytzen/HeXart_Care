@@ -1,5 +1,7 @@
 /*
-    Module 4 : MODULE LECTURE ET TRAITEMENT DE DONNEES
+    Programme qui permet :
+    - de changer l'affichage LED du coeur.
+    - d'avoir des informations sur les pouls enregistrés et de traiter ces données.
 
     Projet : HeXartCare
     Corentin, Gabriel, Julien, Arthur
