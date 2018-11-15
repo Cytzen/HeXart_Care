@@ -3,6 +3,8 @@
 
 #include "param.h"
 
+// Entêtes des fonctions de coeur.ino
+void fmode(int mode, int x, int j, int bps);
 void all();
 void allBlink();
 void oneOuttaX(int x);
