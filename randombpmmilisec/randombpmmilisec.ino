@@ -3,7 +3,7 @@
    - Donne une moyenne glissante des valeurs aléatoires du rythme cardiaque sur 5 éléments.
    - Le résultat final est composé de deux éléments : Rythme cardiaque (bpm) et à quel moment il a été prélevé, en ms (tempsMS).
 
-   Programme étiter par Julien LORENZO / Gabriel RICARD
+   Programme édité par Julien LORENZO / Gabriel RICARD
  */
 
 
@@ -69,7 +69,7 @@ delay(abs(1000-bps));/*ajouter valeur absolu
 
   Serial.print(bpm);
   Serial.print(";");
-  Serial.print(tempsMS); 
+  Serial.println(tempsMS); 
 
   delay(1000);
  }
