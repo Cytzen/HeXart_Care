@@ -1,7 +1,7 @@
 #ifndef PARAM_H_
 #define PARAM_H_
 
-int mode = 3;
-int x = 1;
+int mode = 7;
+int x = 4;
 
 #endif /* PARAM_H */
