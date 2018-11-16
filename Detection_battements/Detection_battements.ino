@@ -10,6 +10,7 @@ void setup() {
   // put your setup code here, to run once:
   for(int i = 0; i<50; i++){
     Moy[i]=0;
+    pinMode(13, OUTPUT);
   }
   Serial.begin(9600);
 }

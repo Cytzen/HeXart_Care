@@ -22,8 +22,7 @@ int i;    // Permet d'intialiser les boucles for
 int test = 1;   // Permet de stopper la boucle while une fois les 10 valeurs testées
 
 void setup() {
-  //randomSeed(analogRead(5));
-  pinMode(2, INPUT);
+  randomSeed(analogRead(5));
   for(i=3; i<13; i++){
     pinMode(i, OUTPUT);   // On initialise les pins sur lesquels sont branchs les LEDs comme sorties.
   }
@@ -34,25 +33,23 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(0));
-  if(analogRead(0) > 500){
-    bps = random(1000,1333);    // On génère une valeur aléatoire correspondant aux battements par seconde *1000
-    bpm = (bps / 1000)*60;    // On convertit en battements par minute
-    tempsMS = tempsMS + 1000;   // On incrémente de 1 seconde tempsMS
     
-    fmode(mode, x, &j, bps);
-      
-    if(test<11){   // On récupère les 10 premières valeurs
-      test++;   // On incrémente test
-      for(int i =0; i<4;i++){
-        Moy[i]=Moy[i+1];    // On décale le tableau
-      }
-      Moy[4]=bpm;
-      Moye = (Moy[0]+Moy[1]+Moy[2]+Moy[3]+Moy[4])/5;    // On fait la moyenne
-      Serial.print(tempsMS);
-      Serial.print(" ; ");    // On affiche la moyenne des bpm
-      Serial.println(Moye);
+  bps = random(1000,1333);    // On génère une valeur aléatoire correspondant aux battements par seconde *1000
+  bpm = (bps / 1000)*60;    // On convertit en battements par minute
+  tempsMS = tempsMS + 1000;   // On incrémente de 1 seconde tempsMS
+  
+  fmode(mode, x, &j, bps);
+    
+  if(test<11){   // On récupère les 10 premières valeurs
+    test++;   // On incrémente test
+    for(int i =0; i<4;i++){
+      Moy[i]=Moy[i+1];    // On décale le tableau
     }
+    Moy[4]=bpm;
+    Moye = (Moy[0]+Moy[1]+Moy[2]+Moy[3]+Moy[4])/5;    // On fait la moyenne
+    Serial.print(tempsMS);
+    Serial.print(" ; ");    // On affiche la moyenne des bpm
+    Serial.println(Moye);
   }
 }
 

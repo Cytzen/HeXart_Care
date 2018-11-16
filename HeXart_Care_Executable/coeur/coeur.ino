@@ -22,7 +22,8 @@ int i;    // Permet d'intialiser les boucles for
 int test = 1;   // Permet de stopper la boucle while une fois les 10 valeurs testées
 
 void setup() {
-  randomSeed(analogRead(5));
+  //randomSeed(analogRead(5));
+  pinMode(2, INPUT);
   for(i=3; i<13; i++){
     pinMode(i, OUTPUT);   // On initialise les pins sur lesquels sont branchs les LEDs comme sorties.
   }
@@ -33,67 +34,70 @@ void setup() {
 }
 
 void loop() {
+  Serial.println(analogRead(0));
+  if(analogRead(0) > 500){
+    bps = random(1000,1333);    // On génère une valeur aléatoire correspondant aux battements par seconde *1000
+    bpm = (bps / 1000)*60;    // On convertit en battements par minute
+    tempsMS = tempsMS + 1000;   // On incrémente de 1 seconde tempsMS
     
-  bps = random(1000,1333);    // On génère une valeur aléatoire correspondant aux battements par seconde *1000
-  bpm = (bps / 1000)*60;    // On convertit en battements par minute
-  tempsMS = tempsMS + 1000;   // On incrémente de 1 seconde tempsMS
-  
-  fmode(mode, x, j, bps);
-    
-  if(test<11){   // On récupère les 10 premières valeurs
-    test++;   // On incrémente test
-    for(int i =0; i<4;i++){
-      Moy[i]=Moy[i+1];    // On décale le tableau
+    fmode(mode, x, &j, bps);
+      
+    if(test<11){   // On récupère les 10 premières valeurs
+      test++;   // On incrémente test
+      for(int i =0; i<4;i++){
+        Moy[i]=Moy[i+1];    // On décale le tableau
+      }
+      Moy[4]=bpm;
+      Moye = (Moy[0]+Moy[1]+Moy[2]+Moy[3]+Moy[4])/5;    // On fait la moyenne
+      Serial.print(tempsMS);
+      Serial.print(" ; ");    // On affiche la moyenne des bpm
+      Serial.println(Moye);
     }
-    Moy[4]=bpm;
-    Moye = (Moy[0]+Moy[1]+Moy[2]+Moy[3]+Moy[4])/5;    // On fait la moyenne
-    Serial.print(tempsMS);
-    Serial.print(" ; ");    // On affiche la moyenne des bpm
-    Serial.println(Moye);
   }
 }
 
-void fmode(int mode, int x, int j, int bps){
+void fmode(int mode, int x, int *j, int bps){
   switch(mode){ // On regarde la valeur de mode, et on choisi la fonction correspondante.
-        case 1:{
-          all();
-          delay((1000000/bps)-150);   // On supprime le délai induit par la mode des LEDs
-          break;
-        }
-        case 2:{
-          allBlink();
-          delay((1000000/bps)-270);
-          break;
-        }
-        case 3:{ 
-          oneOuttaX(x);
-          delay((1000000/bps)-150);
-          break;
-        }
-        case 4:{
-          caterpillar(j);
-          j++; 
-          if(j>12){ //(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
-            j = 3;
-          }
-          delay((1000000/bps)-150);
-          break;
-        }
-        case 5:{
-          caterpillarBlink(j);
-          j++;
-          if(j>12){ // Same as (1)
-            j = 3;
-          }
-          delay((1000000/bps)-280);
-          break;
-        }
-        case 6:{
-          alone(x);
-          delay((1000000/bps)-150);
-          break;
-        }
+    case 1:{
+      all();
+      delay((1000000/bps)-150);   // On supprime le délai induit par la mode des LEDs
+      break;
+    }
+    case 2:{
+      allBlink();
+      delay((1000000/bps)-270);
+      break;
+    }
+    case 3:{ 
+      oneOuttaX(x);
+      delay((1000000/bps)-150);
+      break;
+    }
+    case 4:{
+      caterpillar(*j);
+      (*j)++; 
+      if(*j>12){ //(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
+        *j = 3;
       }
+      Serial.println(*j);
+      delay((1000000/bps)-150);
+      break;
+    }
+    case 5:{
+      caterpillarBlink(*j);
+      (*j)++;
+      if(*j>12){ // Same as (1)
+        *j = 3;
+      }
+      delay((1000000/bps)-280);
+      break;
+    }
+    case 6:{
+      alone(x);
+      delay((1000000/bps)-150);
+      break;
+    }
+  }
 }
 
 void all(){   // Fonction pour faire briller toutes les LEDs
