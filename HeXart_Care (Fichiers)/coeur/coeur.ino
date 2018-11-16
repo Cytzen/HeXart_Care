@@ -38,7 +38,7 @@ void loop() {
   bpm = (bps / 1000)*60;    // On convertit en battements par minute
   tempsMS = tempsMS + 1000;   // On incrémente de 1 seconde tempsMS
   
-  fmode(mode, x, j, bps);
+  fmode(mode, x, &j, bps);
     
   if(test<11){   // On récupère les 10 premières valeurs
     test++;   // On incrémente test
@@ -53,47 +53,48 @@ void loop() {
   }
 }
 
-void fmode(int mode, int x, int j, int bps){
+void fmode(int mode, int x, int *j, int bps){
   switch(mode){ // On regarde la valeur de mode, et on choisi la fonction correspondante.
-        case 1:{
-          all();
-          delay((1000000/bps)-150);   // On supprime le délai induit par la mode des LEDs
-          break;
-        }
-        case 2:{
-          allBlink();
-          delay((1000000/bps)-270);
-          break;
-        }
-        case 3:{ 
-          oneOuttaX(x);
-          delay((1000000/bps)-150);
-          break;
-        }
-        case 4:{
-          caterpillar(j);
-          j++; 
-          if(j>12){ //(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
-            j = 3;
-          }
-          delay((1000000/bps)-150);
-          break;
-        }
-        case 5:{
-          caterpillarBlink(j);
-          j++;
-          if(j>12){ // Same as (1)
-            j = 3;
-          }
-          delay((1000000/bps)-280);
-          break;
-        }
-        case 6:{
-          alone(x);
-          delay((1000000/bps)-150);
-          break;
-        }
+    case 1:{
+      all();
+      delay((1000000/bps)-150);   // On supprime le délai induit par la mode des LEDs
+      break;
+    }
+    case 2:{
+      allBlink();
+      delay((1000000/bps)-270);
+      break;
+    }
+    case 3:{ 
+      oneOuttaX(x);
+      delay((1000000/bps)-150);
+      break;
+    }
+    case 4:{
+      caterpillar(*j);
+      (*j)++; 
+      if(*j>12){ //(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
+        *j = 3;
       }
+      Serial.println(*j);
+      delay((1000000/bps)-150);
+      break;
+    }
+    case 5:{
+      caterpillarBlink(*j);
+      (*j)++;
+      if(*j>12){ // Same as (1)
+        *j = 3;
+      }
+      delay((1000000/bps)-280);
+      break;
+    }
+    case 6:{
+      alone(x);
+      delay((1000000/bps)-150);
+      break;
+    }
+  }
 }
 
 void all(){   // Fonction pour faire briller toutes les LEDs

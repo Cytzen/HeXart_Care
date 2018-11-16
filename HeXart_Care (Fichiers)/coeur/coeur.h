@@ -8,8 +8,8 @@ void fmode(int mode, int x, int j, int bps);
 void all();
 void allBlink();
 void oneOuttaX(int x);
-void caterpillar(int i);
-void caterpillarBlink(int i);
+void caterpillar(int *j);
+void caterpillarBlink(int *j);
 void alone(int x);
 
 #endif /* PARAM_H */
