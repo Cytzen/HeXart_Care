@@ -28,6 +28,9 @@ void loop() {
   if(MoinSeuil == false){
     if(Moye > 170){
       battements = battements + 1;
+       digitalWrite(13, HIGH);
+       delay(5);
+       digitalWrite(13, LOW);
       MoinSeuil = true;
     }
   }
