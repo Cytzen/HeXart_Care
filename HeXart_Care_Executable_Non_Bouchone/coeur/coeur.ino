@@ -22,7 +22,6 @@ int i;    // Permet d'intialiser les boucles for
 int test = 1;   // Permet de stopper la boucle while une fois les 10 valeurs testées
 
 void setup() {
-  //randomSeed(analogRead(5));
   pinMode(2, INPUT);
   for(i=3; i<13; i++){
     pinMode(i, OUTPUT);   // On initialise les pins sur lesquels sont branchs les LEDs comme sorties.
