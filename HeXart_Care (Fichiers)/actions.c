@@ -51,7 +51,7 @@ void ordreDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 //-------------------------------------------------------------------------------------------------------------------//
 void ordreCroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    trisCroissantTemps(ptr_Tableau, ptr_nbrLine);
+    trisCroissantPouls(ptr_Tableau, ptr_nbrLine);
 
     // Boucle pour parcourir le tableau du début vers la fin.
     for (int i = 0; i < *ptr_nbrLine; i++)
@@ -67,7 +67,7 @@ void ordreCroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine)
 //-------------------------------------------------------------------------------------------------------------------//
 void ordreDecroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    trisDecroissantTemps(ptr_Tableau, ptr_nbrLine);
+    trisDecroissantPouls(ptr_Tableau, ptr_nbrLine);
 
     // Boucle pour parcourir le tableau du début vers la fin.
     for (int i = 0; i < *ptr_nbrLine; i++)
@@ -187,7 +187,7 @@ void nbrLigneDonnees(int* ptr_nbrLine)
 //-------------------------------------------------------------------------------------------------------------------//
 void poulsMin(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    trisCroissantTemps(ptr_Tableau, ptr_nbrLine);
+    trisCroissantPouls(ptr_Tableau, ptr_nbrLine);
 
     printf("Le pouls minimum est de %f.\n",ptr_Tableau[0].pouls);
 
@@ -208,7 +208,7 @@ void poulsMin(ligne* ptr_Tableau, int* ptr_nbrLine)
 //-------------------------------------------------------------------------------------------------------------------//
 void poulsMax(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
-    trisCroissantTemps(ptr_Tableau, ptr_nbrLine);
+    trisCroissantPouls(ptr_Tableau, ptr_nbrLine);
 
     printf("Le pouls maximum est de %f.\n",ptr_Tableau[*ptr_nbrLine-1].pouls);
 

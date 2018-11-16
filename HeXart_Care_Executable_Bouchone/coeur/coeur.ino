@@ -3,7 +3,7 @@
    - Donne une moyenne glissante des valeurs aléatoires du rythme cardiaque sur 5 éléments.
    - Le résultat final est composé de deux éléments : Rythme cardiaque (bpm) et à quel moment il a été prélevé, en ms (tempsMS).
 
-   Programme édité par Julien LORENZO / Gabriel RICARD / Corentin PAUGAM
+   Programme édité par Julien LORENZO / Gabriel RICARD / Corentin PAUGAM / Arthur CALDEIREIRO
  */
  
 #include "coeur.h"
@@ -12,9 +12,7 @@
 //Déclaration des Variables :
 double bps;   // Nombre décimal : battements par seconde
 unsigned int bpm;   // Entier : battement par minute
-unsigned int time;    // Variable compteur temporel (de base en ms)
-unsigned int tempsS;    // Variable indiquant le temps en Seconde
-unsigned int tempsMS;   // Variable indiquant le temps en Milliseconde
+unsigned int tempsMS = 0;   // Variable indiquant le temps en Milliseconde
 float Moy[5];   // Tableau de nombres décimaux stockant les cinq éléement pour calculer une moyenne glissante
 float Moye;   // Résultante de la moyenne glissante
 int j = 3;    // Compteur pour les chenilles
@@ -76,7 +74,6 @@ void fmode(int mode, int x, int *j, int bps){
       if(*j>12){ //(1) Ces 4 lignes permettent de boucler la chenille des LEDs 
         *j = 3;
       }
-      Serial.println(*j);
       delay((1000000/bps)-150);
       break;
     }

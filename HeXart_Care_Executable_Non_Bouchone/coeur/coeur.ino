@@ -12,8 +12,6 @@
 //Déclaration des Variables :
 double bps;   // Nombre décimal : battements par seconde
 unsigned int bpm;   // Entier : battement par minute
-unsigned int time;    // Variable compteur temporel (de base en ms)
-unsigned int tempsS;    // Variable indiquant le temps en Seconde
 unsigned int tempsMS;   // Variable indiquant le temps en Milliseconde
 float Moy[5];   // Tableau de nombres décimaux stockant les cinq éléement pour calculer une moyenne glissante
 float Moye;   // Résultante de la moyenne glissante
@@ -33,7 +31,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(0));
   if(analogRead(0) > 500){
     bps = random(1000,1333);    // On génère une valeur aléatoire correspondant aux battements par seconde *1000
     bpm = (bps / 1000)*60;    // On convertit en battements par minute

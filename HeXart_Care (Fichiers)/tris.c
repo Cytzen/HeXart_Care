@@ -4,7 +4,7 @@
 #include "tris.h"
 
 
-void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
+void trisCroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
     int min;
     ligne tempo;
@@ -28,7 +28,7 @@ void trisCroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
 }
 
 
-void trisDecroissantTemps(ligne* ptr_Tableau, int* ptr_nbrLine)
+void trisDecroissantPouls(ligne* ptr_Tableau, int* ptr_nbrLine)
 {
     int max;
     ligne tempo;
