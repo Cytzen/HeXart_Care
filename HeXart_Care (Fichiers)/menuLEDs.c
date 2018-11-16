@@ -20,6 +20,7 @@ int menuLEDs()
     printf("(autre) Retour\n\n");
 
     scanf("%d", &mode);     // On fait choisir le mode à l'utilisateur
+    printf("\n");
 
     if(mode == 3)      // On fait choisir x à l'utilisateur
     {
@@ -44,6 +45,7 @@ int menuLEDs()
     else if(mode < 1 || mode > 6)
     {
         printf("RETOUR !");
+        printf("\n");
         return 1;
     }
     if (ecriture(mode, x))          // On lance la fonction ecriture()
