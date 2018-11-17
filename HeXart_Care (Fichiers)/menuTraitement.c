@@ -15,7 +15,7 @@ void menuTraitement(ligne* ptr_Tableau, int* ptr_nbrLine)
         printf("Que souhaitez-vous faire?\n\n");
         printf("(1)     Afficher dans l'ordre du fichier.\n");
         printf("(2)     Afficher dans l'ordre croissant des dates.\n");
-        printf("(3)     Afficher dans l'ordre decrissant des date.\n");
+        printf("(3)     Afficher dans l'ordre decroissant des dates.\n");
         printf("(4)     Afficher dans l'ordre croissant des pouls.\n");
         printf("(5)     Afficher dans l'ordre decroissant des pouls.\n");
         printf("(6)     Afficher les donnees pour un temps choisi.\n");
