@@ -55,7 +55,7 @@ void fmode(int mode, int x, int *j, int bps){
   switch(mode){ // On regarde la valeur de mode, et on choisi la fonction correspondante.
     case 1:{
       all();
-      delay((1000000/bps)-150);   // On supprime le délai induit par la mode des LEDs
+      delay((1000000/bps)-150);   // On supprime le délai induit par le mode des LEDs
       break;
     }
     case 2:{
