@@ -14,6 +14,7 @@ void setup() {
   void draw() {
     if (udSerial.available() > 0) {
       String SenVal = udSerial.readString();
+      println(SenVal);
       /* int Heure = hour();
       int Minute = minute();
       int Seconde = second();

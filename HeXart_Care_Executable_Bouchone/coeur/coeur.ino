@@ -12,7 +12,7 @@
 //Déclaration des Variables :
 double bps;   // Nombre décimal : battements par seconde
 unsigned int bpm;   // Entier : battement par minute
-unsigned int tempsMS = 0;   // Variable indiquant le temps en Milliseconde
+unsigned int tempsMS;   // Variable indiquant le temps en Milliseconde
 float Moy[5];   // Tableau de nombres décimaux stockant les cinq éléement pour calculer une moyenne glissante
 float Moye;   // Résultante de la moyenne glissante
 int j = 3;    // Compteur pour les chenilles
@@ -46,8 +46,8 @@ void loop() {
     Moy[4]=bpm;
     Moye = (Moy[0]+Moy[1]+Moy[2]+Moy[3]+Moy[4])/5;    // On fait la moyenne
     Serial.print(tempsMS);
-    Serial.print(" ; ");    // On affiche la moyenne des bpm
-    Serial.println(Moye);
+    Serial.print(";");    // On affiche la moyenne des bpm
+    Serial.print(Moye);
   }
 }
 
