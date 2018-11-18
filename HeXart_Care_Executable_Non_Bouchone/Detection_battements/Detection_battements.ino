@@ -44,9 +44,9 @@ void loop() {
     C = 0;                                // on remet le compteur à 0
     S = S + 3;                            // on ajoute trois secondes au compteur S
     battements = battements * 20;         // on détermine le BPM d'une mesure sur trois secondes
-    Serial.print(battements);             
+    Serial.print(S);             
     Serial.print(";");                    // on envoie les données au port USB
-    Serial.print(S);
+    Serial.print(battements);
     battements = 0;                       // on remet le compteur de battement à 0
   }
   delay(4);                               // on applique un delais de 4 ms sur toute la procédure loop
